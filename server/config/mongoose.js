@@ -5,13 +5,6 @@ mongoose.connect('mongodb://172.31.17.85:27017/MEAN_eCommerceSchema');
 
 var mongoose = require('mongoose');
 
-<<<<<<< HEAD
-fs.readdirSync(models_path).forEach(function(file) {
-	if (file.indexOf('.js') > 0) {
-		require(models_path + '/' + file);
-	}
-})
-=======
 var UserSchema = new mongoose.Schema({
   first_name: { type: String, trim: true },
   created_at: { type: Date, default: Date.now },
@@ -34,4 +27,3 @@ UserSchema.path('first_name').required(true, "First Name is required");
 // 		require(models_path + '/' + file);
 // 	}
 // })
->>>>>>> f6a2b2af201eee96c0c39c725564a00c0c340d83
